@@ -19,11 +19,11 @@ namespace AplikasiInputDataMahasiswa
         
         public class Mahasiswa
         {
-            public string Nim;
-            public string Nama;
-            public string Kelas;
-            public int Nilai;
-            public char NilaiHuruf;
+            public string Nim { get; set; }
+            public string Nama { get; set; }
+            public string Kelas { get; set; }
+            public int Nilai { get; set; }
+            public char NilaiHuruf { get; set; }
         }
 
         
