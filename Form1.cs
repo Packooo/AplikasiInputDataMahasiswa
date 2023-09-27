@@ -23,7 +23,7 @@ namespace AplikasiInputDataMahasiswa
             public string Nama;
             public string Kelas;
             public int Nilai;
-            public string NilaiHuruf;
+            public char NilaiHuruf;
         }
 
         
@@ -92,12 +92,38 @@ namespace AplikasiInputDataMahasiswa
                 item.SubItems.Add(mhs.Nama);
                 item.SubItems.Add(mhs.Kelas);
                 item.SubItems.Add(mhs.Nilai.ToString());
-                item.SubItems.Add(mhs.NilaiHuruf);
+                item.SubItems.Add(mhs.NilaiHuruf.ToString());
                 lvwMahasiswa.Items.Add(item);
             }
         }
 
-
+        //Pengubah nilai
+        private char NilaiHuruf(int nilai)
+        {
+            char hasil;
+            if (nilai > 81)
+            {
+                hasil = 'A';
+            }
+            else if (nilai > 60)
+            {
+                hasil = 'B';
+            }
+            else if (nilai > 40)
+            {
+                hasil = 'C';
+            }
+            else if (nilai > 20)
+            {
+                hasil = 'D' ;
+            }
+            else
+            {
+                hasil = 'E';
+            }
+                return hasil;
+           
+        }
 
             private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -125,27 +151,8 @@ namespace AplikasiInputDataMahasiswa
             mhs.Nama = txtNama.Text;
             mhs.Kelas = txtKelas.Text;
             mhs.Nilai = int.Parse(txtNilai.Text);
+            mhs.NilaiHuruf = NilaiHuruf(mhs.Nilai);
             
-            if(mhs.Nilai > 81)
-            {
-                mhs.NilaiHuruf = "A";
-            }
-            else if (mhs.Nilai > 60)
-            {
-                mhs.NilaiHuruf = "B";
-            }
-            else if (mhs.Nilai > 40)
-            {
-                mhs.NilaiHuruf = "C";
-            }
-            else if (mhs.Nilai > 20)
-            {
-                mhs.NilaiHuruf = "D";
-            } 
-            else
-            {
-                mhs.NilaiHuruf = "E";
-            }
 
             // tambahkan objek mahasiswa ke dalam collection
             list.Add(mhs);
@@ -187,6 +194,11 @@ namespace AplikasiInputDataMahasiswa
                 MessageBox.Show("Data mahasiswa belum dipilih !!!", "Peringatan",
                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void lvwMahasiswa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

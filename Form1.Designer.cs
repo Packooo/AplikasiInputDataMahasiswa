@@ -39,9 +39,9 @@
             this.btnSimpan = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnTampilkanData = new System.Windows.Forms.Button();
-            this.btnHapus = new System.Windows.Forms.Button();
             this.lvwMahasiswa = new System.Windows.Forms.ListView();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnTampilkanData = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,15 +143,15 @@
             this.groupBox1.Text = "[ Daftar Mahasiswa ]";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // btnTampilkanData
+            // lvwMahasiswa
             // 
-            this.btnTampilkanData.Location = new System.Drawing.Point(6, 35);
-            this.btnTampilkanData.Name = "btnTampilkanData";
-            this.btnTampilkanData.Size = new System.Drawing.Size(80, 23);
-            this.btnTampilkanData.TabIndex = 9;
-            this.btnTampilkanData.Text = "Tampilkan Data";
-            this.btnTampilkanData.UseVisualStyleBackColor = true;
-            this.btnTampilkanData.Click += new System.EventHandler(this.btnTampilkanData_Click);
+            this.lvwMahasiswa.HideSelection = false;
+            this.lvwMahasiswa.Location = new System.Drawing.Point(6, 64);
+            this.lvwMahasiswa.Name = "lvwMahasiswa";
+            this.lvwMahasiswa.Size = new System.Drawing.Size(537, 257);
+            this.lvwMahasiswa.TabIndex = 11;
+            this.lvwMahasiswa.UseCompatibleStateImageBehavior = false;
+            this.lvwMahasiswa.SelectedIndexChanged += new System.EventHandler(this.lvwMahasiswa_SelectedIndexChanged);
             // 
             // btnHapus
             // 
@@ -163,14 +163,15 @@
             this.btnHapus.UseVisualStyleBackColor = true;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
-            // lvwMahasiswa
+            // btnTampilkanData
             // 
-            this.lvwMahasiswa.HideSelection = false;
-            this.lvwMahasiswa.Location = new System.Drawing.Point(6, 64);
-            this.lvwMahasiswa.Name = "lvwMahasiswa";
-            this.lvwMahasiswa.Size = new System.Drawing.Size(537, 257);
-            this.lvwMahasiswa.TabIndex = 11;
-            this.lvwMahasiswa.UseCompatibleStateImageBehavior = false;
+            this.btnTampilkanData.Location = new System.Drawing.Point(6, 35);
+            this.btnTampilkanData.Name = "btnTampilkanData";
+            this.btnTampilkanData.Size = new System.Drawing.Size(80, 23);
+            this.btnTampilkanData.TabIndex = 9;
+            this.btnTampilkanData.Text = "Tampilkan Data";
+            this.btnTampilkanData.UseVisualStyleBackColor = true;
+            this.btnTampilkanData.Click += new System.EventHandler(this.btnTampilkanData_Click);
             // 
             // Form1
             // 
