@@ -39,6 +39,7 @@
             this.btnSimpan = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSort = new System.Windows.Forms.Button();
             this.lvwMahasiswa = new System.Windows.Forms.ListView();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnTampilkanData = new System.Windows.Forms.Button();
@@ -132,6 +133,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSort);
             this.groupBox1.Controls.Add(this.lvwMahasiswa);
             this.groupBox1.Controls.Add(this.btnHapus);
             this.groupBox1.Controls.Add(this.btnTampilkanData);
@@ -142,6 +144,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "[ Daftar Mahasiswa ]";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnSort
+            // 
+            this.btnSort.Location = new System.Drawing.Point(181, 35);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(75, 23);
+            this.btnSort.TabIndex = 11;
+            this.btnSort.Text = "Sorting";
+            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // lvwMahasiswa
             // 
@@ -214,6 +226,7 @@
         private System.Windows.Forms.ListView lvwMahasiswa;
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnTampilkanData;
+        private System.Windows.Forms.Button btnSort;
     }
 }
 

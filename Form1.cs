@@ -26,7 +26,6 @@ namespace AplikasiInputDataMahasiswa
             public char NilaiHuruf { get; set; }
         }
 
-        
 
         //constructor
         public Form1()
@@ -95,6 +94,12 @@ namespace AplikasiInputDataMahasiswa
                 item.SubItems.Add(mhs.NilaiHuruf.ToString());
                 lvwMahasiswa.Items.Add(item);
             }
+        }
+
+
+        private void SortingNama()
+        {
+            list =  list.OrderBy(w => w.Nama).ToList();
         }
 
         //Pengubah nilai
@@ -199,6 +204,11 @@ namespace AplikasiInputDataMahasiswa
         private void lvwMahasiswa_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            SortingNama();
         }
     }
 }
