@@ -209,6 +209,7 @@ namespace AplikasiInputDataMahasiswa
         private void btnSort_Click(object sender, EventArgs e)
         {
             SortingNama();
+            TampilkanData();
         }
     }
 }
